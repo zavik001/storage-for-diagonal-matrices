@@ -43,6 +43,7 @@ run3: $(CONVERSION_EXEC)
 clean:
 	@echo "Cleaning up..."
 	powershell -Command "Remove-Item -Path $(GENERATOR_EXEC),$(MAIN_EXEC),$(CONVERSION_EXEC) -Force"
+	rm -rf $(GENERATOR_EXEC),$(MAIN_EXEC),$(CONVERSION_EXEC)
 	@echo "Cleanup complete."
 
 .PHONY: all run1 run2 run3 clean
